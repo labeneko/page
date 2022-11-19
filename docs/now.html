@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>テストです</title>
-</head>
+    <title>自己紹介</title>
+    <link rel="stylesheet" href="kadai.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    </head>
 <body>
-  <div id="view_time"></div>
-  <form><input type="button" value="Now" onClick="message()"></form>
-  <script>
+  <div class="page">
+    <header tabindex="0">N予備校 学習課題</header>
+    <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div id="nav-content" tabindex="0">
+        <ul>
+          <li><a href="https://www.nnn.ed.nico/">Home</a></li>
+          <li><a href="#0">Services</a></li>
+          <li><a href="#0">Blog</a></li>
+          <li><a href="#0">About</a></li>
+          <li><a href="#0">Contact</a></li>
+          <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <div class="content">
+        <h2>Off-screen navigation using <span>:focus-within</span></h2>
+        <p>Adding yet another pure CSS technique to the list of off-screen navigation by "hacking" the :focus-within pseudo-class. Have a look at the code to see how it works.
+          <form><input type="button" value="Now" onClick="message()"></form>
+          <span id="view_time"></span></p>
+          <small><strong>NB!</strong> Use a browser that supports :focus-within</small>
+      </div>
+    </main>
+  </div>
+    <script>
     function message() {
       document.getElementById("view_time").innerHTML = getNow();
     }
